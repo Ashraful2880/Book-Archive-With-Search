@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive API</title>
+    <!-- Bootstrap Style Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header Area Code Start -->
+    <header class="container">
+        <h1 class="text-center my-4">Search Your <span class="text-warning">Favorite Book</span></h1>
+    </header>
+    <!-- Main Area Code Start -->
+    <main class="container">
+        <!-- Search Area Code Start -->
+        <section class="w-50 mx-auto d-flex my-4">
+            <input type="text" id="search-field" class="form-control ms-5 py-2 p-4 fs-5" id="inputPassword2"
+                placeholder="Search Book Here">
+            <button type="submit" id="submit-button" class="btn btn-primary me-5 py-2 px-4 fs-5 mx-2"
+                onclick="searchBook()">Search</button>
+        </section>
+        <!-- Section For Show Result Message -->
+        <section class="container mb-5">
+            <h4 class="text-center" id="result-message"></h4>
+        </section>
+        <!-- Card Area Code Strat -->
+        <section class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="container-div">
+
+            </div>
+        </section>
+
+
+        <!-- Card Area Code Strat -->
+    </main>
+
+
+</body>
+<!-- Bootstrap Script Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+<!-- Custom Script Link -->
+<script src="app.js"></script>
+
+</html>
