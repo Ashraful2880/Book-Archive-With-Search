@@ -5,7 +5,7 @@
 const searchBook = () => {
     const inputValue = document.getElementById('search-field').value;
     document.getElementById('search-field').value = '';
-    const url = (`http://openlibrary.org/search.json?q=${inputValue}`);
+    const url = (`https://openlibrary.org/search.json?q=${inputValue}`);
     fetch(url)
         .then(res => res.json())
         .then(data => bookDetails(data.docs))
@@ -21,6 +21,7 @@ const bookDetails = books => {
     const container = document.getElementById('container-div');
     const searchMessage = document.getElementById('result-message');
     container.textContent = "";
+    // Condition For Check Array Length
     if (books.length > 0) {
         searchMessage.innerText = `${books.length} Books Found`
     } else {
