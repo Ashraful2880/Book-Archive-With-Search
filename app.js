@@ -33,7 +33,7 @@ const bookDetails = books => {
         container.appendChild(col);
         col.innerHTML = `
             <div class="card h-100" >
-                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-75" alt="Card-Image">
+                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-50" alt="Card-Image">
                     <div class="card-body">
                         <h5 class="card-title">Book Name: ${book.title}</h5>
                         <h6>Author: ${book.author_name}</h6>
