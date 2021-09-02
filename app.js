@@ -26,19 +26,20 @@ const bookDetails = books => {
     } else {
         searchMessage.innerText = `No Books Found`
     }
-    books?.forEach(book => {
+    books.forEach(book => {
+        console.log(book);
         const col = document.createElement('col');
         container.appendChild(col);
         col.innerHTML = `
-                <div class="card h-100" >
-                    <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-100" alt="Card-Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Book Name: ${book.title}</h5>
-                            <h6>Author: ${book.author_name[0]}</h6>
-                            <p class="card-text"><span class="text-warning fw-bold">Publisher:</span> ${book.publisher[0]}</p>
-                            <p class="card-text"><span class="text-primary fw-bold">Publish Date:</span> ${book.publish_date[0]}</p>
-                        </div>
-                </div>
-                `
+            <div class="card h-100" >
+                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-100" alt="Card-Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Name: ${book.title}</h5>
+                        <h6>Author: ${book.author_name}</h6>
+                         <p class="card-text"><span class="text-warning fw-bold">Publisher:</span> ${book.publisher[0]}</p>
+                         <p class="card-text"><span class="text-primary fw-bold">Publish Date:</span> ${book.first_publish_year}</p>
+                     </div>
+            </div>
+         `
     })
 }
